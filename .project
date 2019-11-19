@@ -3,6 +3,8 @@
 	<name>327_proj_ST_lib</name>
 	<comment></comment>
 	<projects>
+		<project>327_proj_ST</project>
+		<project>327_proj_ST_lib</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
