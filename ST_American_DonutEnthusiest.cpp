@@ -8,16 +8,13 @@
 #include <iostream>
 #include <memory>
 
-#include "./includes/Functions.h"
-#include "./includes/Smalltalk_American.h"
 #include "./includes/ST_American_DonutEnthusiest.h"
-#include "./includes/Smalltalk_Brit.h"
-#include "./includes/Watch.h"
 #include "./includes/constants.h"
 
-	//create with appropriate phrases
-	ST_American_DonutEnthusiest::ST_American_DonutEnthusiest(int i){
 
+	//create with appropriate phrases
+	ST_American_DonutEnthusiest::ST_American_DonutEnthusiest(int i) : Smalltalk_American (iPerson){
+		populatePhrases();
 	}
 	ST_American_DonutEnthusiest::~ST_American_DonutEnthusiest(void){
 
@@ -28,5 +25,9 @@
 	//the end result is mySmallTalk will contain first the base class phrases and
 	//then this classes phrases
 	void ST_American_DonutEnthusiest::populatePhrases(){
-
+		mySmallTalk.push_back(AMERICAN_DE_PHRASE_1);
+		mySmallTalk.push_back(AMERICAN_DE_PHRASE_2);
+		mySmallTalk.push_back(AMERICAN_DE_PHRASE_3);
+		mySmallTalk.push_back(AMERICAN_DE_PHRASE_4);
+		mySmallTalk.push_back(AMERICAN_DE_PHRASE_5);
 	}

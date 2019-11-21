@@ -8,15 +8,13 @@
 #include <iostream>
 #include <memory>
 
-#include "./includes/Functions.h"
-#include "./includes/Smalltalk_American.h"
-#include "./includes/ST_American_DonutEnthusiest.h"
-#include "./includes/Smalltalk_Brit.h"
-#include "./includes/Watch.h"
+#include "./includes/Smalltalk.h"
 #include "./includes/constants.h"
 
+using namespace std;
+
 	//derived class will set Nationality, iPerson. iPerson is just a counter used to distinguish between objects of the same type
-	Smalltalk::Smalltalk(std::string myNationality,int iPerson, : nationality(myNationality), iPerson(iPerson)){
+	Smalltalk::Smalltalk(std::string myNationality,int iPerson) : nationality(myNationality), iPerson(iPerson){
 
 	}
 
@@ -30,7 +28,14 @@
 	//for instance the following string comes from an American instance, the 10th iPerson and it is printing AMERICAN_PHRASE_2
 	//AMERICAN 10:Why yes, I would like to supersize that
 	std::string Smalltalk::saySomething(){
-
+		string ms;
+		vector<string>::iterator myStringVectorIterator;
+		for (myStringVectorIterator = mySmallTalk.begin();
+				myStringVectorIterator != mySmallTalk.end();
+				myStringVectorIterator++){
+			ms += nationality + " " + to_string(iPerson) + ":" + *myStringVectorIterator + "\n";
+		}
+		return ms;
 	}
 
 	//returns the time (if pWatch contains a watch ) in the form of THE_CURRENT_TIME_IS: (from the actual watch object itself) and then the time

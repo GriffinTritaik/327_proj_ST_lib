@@ -6,6 +6,7 @@
  */
 #include <ctime>
 #include "./includes/Watch.h"
+#include "./includes/constants.h"
 
 Watch::Watch() {
 }
